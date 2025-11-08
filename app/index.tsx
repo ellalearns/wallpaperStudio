@@ -1,6 +1,8 @@
 import { Text, View } from "react-native";
 import { useFonts } from "expo-font"
 import AppHeader from "@/components/appHeader";
+import WelcomeText from "@/components/welcomeText";
+import { indexStyles } from "@/styles";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -19,6 +21,17 @@ export default function Index() {
   return (
     <View style={{ flex: 1 }}>
       <AppHeader page="home" />
+
+      <View style={indexStyles.mainView}>
+        <WelcomeText />
+        <View>
+          <View>
+            <Text>Categories</Text>
+            <Text>See All</Text>
+          </View>
+          <View></View>
+        </View>
+      </View>
     </View>
   );
 }
