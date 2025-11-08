@@ -5,7 +5,7 @@ import NavButton from "./navButton";
 import { useEffect, useState } from "react";
 import { router } from "expo-router";
 
-type AppHeaderProps = {
+export type AppHeaderProps = {
     page: "home" | "browse" | "favorites" | "settings"
 }
 

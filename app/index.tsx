@@ -1,4 +1,5 @@
 import AppHeader from "@/components/appHeader";
+import Wallpapers from "@/components/wallpapers";
 import WelcomeText from "@/components/welcomeText";
 import { wallpapers } from "@/constants/wallpapers";
 import { indexStyles } from "@/styles";
@@ -24,29 +25,15 @@ export default function Index() {
       <AppHeader page="home" />
 
       <View style={indexStyles.mainView}>
-        <WelcomeText />
+        <WelcomeText page="home" />
+
         <View style={indexStyles.subView}>
           <View style={indexStyles.catView}>
             <Text style={indexStyles.header}>Categories</Text>
             <Text style={indexStyles.aside}>See All</Text>
           </View>
-          <ScrollView contentContainerStyle={indexStyles.scrollView} showsVerticalScrollIndicator={false}>
-            <View style={indexStyles.wallpaperGroupView}>
-              {
-                (wallpapers).map((item, idx) =>
-                  <TouchableOpacity>
-                    <ImageBackground source={item.wallpapers[0]} style={indexStyles.wallpaperView} imageStyle={indexStyles.imgStyle} key={idx}>
-                      <View style={indexStyles.textView}>
-                        <Text style={indexStyles.wallpaperName}>{item.name}</Text>
-                        <Text style={indexStyles.wallpaperDesc}>{item.description}</Text>
-                        <Text style={indexStyles.wallpaperNum}>{item.wallpapers.length} wallpapers</Text>
-                      </View>
-                    </ImageBackground>
-                  </TouchableOpacity>
-                )
-              }
-            </View>
-          </ScrollView>
+          
+          <Wallpapers />
         </View>
       </View>
     </View>

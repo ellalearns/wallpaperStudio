@@ -33,4 +33,8 @@ export const images = {
     space3: require("../assets/images/space3.jpg"),
     urban1: require("../assets/images/urban1.jpg"),
     urban2: require("../assets/images/urban2.jpg"),
+    list: require("../assets/images/list.png"),
+    grid: require("../assets/images/grid.png"),
+    activeList: require("../assets/images/activeList.png"),
+    activeGrid: require("../assets/images/activeGrid.png"),
 }

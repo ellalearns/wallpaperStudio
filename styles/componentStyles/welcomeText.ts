@@ -4,7 +4,9 @@ import { fonts } from "../globals";
 export const welcomeTxtStyles = StyleSheet.create({
     view: {
         gap: 8,
-        width: 870
+        width: 870,
+        alignItems: "flex-start",
+        justifyContent: 'center'
     },
 
     txt: {
@@ -16,8 +18,15 @@ export const welcomeTxtStyles = StyleSheet.create({
     },
 
     img: {
-        width: "100%",
         height: 60,
         resizeMode: "contain"
+    },
+
+    imgView: {
+        width: 870,
+        height: 60,
+        justifyContent: "center",
+        alignItems: "flex-start",
+        overflow: "hidden"
     }
 })
