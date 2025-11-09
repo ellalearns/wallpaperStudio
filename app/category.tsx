@@ -9,6 +9,7 @@ import { Image, ImageBackground, ScrollView, Text, TouchableOpacity, View } from
 import { LinearGradient } from "expo-linear-gradient"
 import { wallpapers } from "@/constants/wallpapers";
 import { fonts } from "@/styles/globals";
+import { setWallpaper } from "wallpaper"
 
 export default function Category() {
 
@@ -48,7 +49,9 @@ export default function Category() {
         })
     }, [currentWallpaper])
 
-
+    // const setPaper = async (img: any) => {
+    //     await setWallpaper(img)
+    // }
 
     return (
         <View style={{ flex: 1 }}>
