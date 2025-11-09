@@ -1,10 +1,11 @@
 import AppHeader from "@/components/appHeader";
 import Wallpapers from "@/components/wallpapers";
 import WelcomeText from "@/components/welcomeText";
-import { wallpapers } from "@/constants/wallpapers";
 import { indexStyles } from "@/styles";
 import { useFonts } from "expo-font";
-import { ImageBackground, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Text, View } from "react-native";
+import { useEffect } from "react";
+import { createFaveTable } from "@/deps/store";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -32,7 +33,7 @@ export default function Index() {
             <Text style={indexStyles.header}>Categories</Text>
             <Text style={indexStyles.aside}>See All</Text>
           </View>
-          
+
           <Wallpapers />
         </View>
       </View>

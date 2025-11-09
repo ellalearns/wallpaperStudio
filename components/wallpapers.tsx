@@ -4,6 +4,7 @@ import { wallpapers } from "@/constants/wallpapers"
 import { router } from "expo-router"
 import { images } from "@/constants/images"
 import { categoryStyles } from "@/styles/categoryStyles"
+import { useState } from "react"
 
 type WallpapersProps = {
   isList?: boolean,
@@ -18,12 +19,28 @@ export default function Wallpapers({ isList, category, setCurrentWallpaper }: Wa
 
   const categoryDetails = category ? (wallpapers.find((item) => item.name === category)) : {}
 
+  const [saved, setSaved] = useState<Record<number, boolean>>({})
+
+  const toggleSave = (idx: number, item: any) => {
+    setSaved(prev => {
+      const isCurrentlySaved = prev[idx] || false;
+
+      if (isCurrentlySaved) {
+        item[2]
+      } else {
+        //
+      }
+
+      return { ...prev, [idx]: !isCurrentlySaved };
+    });
+  };
+
   return (
     <ScrollView contentContainerStyle={indexStyles.scrollView} showsVerticalScrollIndicator={false}>
       <View style={[indexStyles.wallpaperGroupView, isList && indexStyles.wallpaperGroupViewList, category ? null : indexStyles.allWallpaperGroupView]}>
         {
-          category ? categoryWallpapers.map((item, idx) =>
-            <TouchableOpacity onPress={() => {setCurrentWallpaper ? setCurrentWallpaper(item[0]) : null}} style={isList && indexStyles.wallpaperTouch} key={idx}>
+          category ? categoryWallpapers.map((item, idx) => {
+            return <TouchableOpacity onPress={() => { setCurrentWallpaper ? setCurrentWallpaper(item[0]) : null }} style={isList && indexStyles.wallpaperTouch} key={idx}>
 
               <ImageBackground source={item[0]} style={[indexStyles.catWallpaperView, isList && indexStyles.wallpaperViewList]} imageStyle={indexStyles.catImgStyle}>
               </ImageBackground>
@@ -31,17 +48,18 @@ export default function Wallpapers({ isList, category, setCurrentWallpaper }: Wa
               <View style={[indexStyles.catTextView, isList && indexStyles.textViewList]}>
 
                 <Text style={[indexStyles.catWallpaperName, isList && indexStyles.fontList]}>{item[1]}</Text>
-                
+
                 <Text style={[indexStyles.wallpaperNum, isList && indexStyles.fontList, isList && indexStyles.wallpaperNumList]}>{category}</Text>
 
               </View>
 
-              <TouchableOpacity style={[categoryStyles.saveView, isList && categoryStyles.listsaveView]}>
-                <Image source={item[2] === "saved" ? images.saved : images.save} style={categoryStyles.saveImg} />
+              <TouchableOpacity onPress={() => toggleSave(idx, item)} style={[categoryStyles.saveView, isList && categoryStyles.listsaveView, saved[idx] && { backgroundColor: "white" }]}>
+                <Image source={saved[idx] ? images.saved : images.save} style={categoryStyles.saveImg} />
               </TouchableOpacity>
 
             </TouchableOpacity>
-            )
+          }
+          )
 
             : (wallpapers).map((item, idx) =>
               <TouchableOpacity onPress={() => {
