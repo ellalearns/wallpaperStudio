@@ -49,10 +49,6 @@ export default function Category() {
         })
     }, [currentWallpaper])
 
-    // const setPaper = async (img: any) => {
-    //     await setWallpaper(img)
-    // }
-
     return (
         <View style={{ flex: 1 }}>
             <AppHeader page="browse" />

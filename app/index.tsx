@@ -4,8 +4,6 @@ import WelcomeText from "@/components/welcomeText";
 import { indexStyles } from "@/styles";
 import { useFonts } from "expo-font";
 import { Text, View } from "react-native";
-import { useEffect } from "react";
-import { createFaveTable } from "@/deps/store";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
