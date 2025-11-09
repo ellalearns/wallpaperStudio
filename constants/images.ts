@@ -37,4 +37,7 @@ export const images = {
     grid: require("../assets/images/grid.png"),
     activeList: require("../assets/images/activeList.png"),
     activeGrid: require("../assets/images/activeGrid.png"),
+    backArrow: require("../assets/images/backArrow.png"),
+    save: require("../assets/images/save.png"),
+    saved: require("../assets/images/saved.png"),
 }

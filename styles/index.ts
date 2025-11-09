@@ -42,11 +42,20 @@ export const indexStyles = StyleSheet.create({
         flexWrap: "wrap",
         alignItems: "center",
         rowGap: 40,
-        justifyContent: 'space-between'
+        columnGap: 20
+    },
+
+    allWallpaperGroupView: {
+        justifyContent: 'space-between',
     },
 
     wallpaperView: {
         width: 436,
+        height: 291
+    },
+
+    catWallpaperView: {
+        width: 190,
         height: 291
     },
 
@@ -61,12 +70,25 @@ export const indexStyles = StyleSheet.create({
         left: 25
     },
 
+    catTextView: {
+        position: "absolute",
+        bottom: 15,
+        left: 15
+    },
+
     textViewList: {
         position: "static"
     },
 
     wallpaperName: {
         fontFamily: fonts.poppinsSemiBold,
+        fontSize: 24, 
+        lineHeight: 24,
+        color: "#ffffff"
+    },
+
+    catWallpaperName: {
+        fontFamily: fonts.poppinsRegular,
         fontSize: 24, 
         lineHeight: 24,
         color: "#ffffff"
@@ -89,10 +111,10 @@ export const indexStyles = StyleSheet.create({
         borderWidth: 0.5,
         borderColor: "#eeeeee",
         color: "#ffffff",
-        width: 115,
         borderRadius: 30,
         marginTop: 8,
-        backgroundColor: "rgba(255, 255, 255, 0.2)"
+        backgroundColor: "rgba(255, 255, 255, 0.2)",
+        alignSelf: "flex-start"
     },
 
     wallpaperNumList: {
@@ -101,6 +123,10 @@ export const indexStyles = StyleSheet.create({
 
     imgStyle: {
         borderRadius: 30
+    },
+
+    catImgStyle: {
+        borderRadius: 16
     },
 
     scrollView: {
