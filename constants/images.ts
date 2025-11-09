@@ -40,4 +40,8 @@ export const images = {
     backArrow: require("../assets/images/backArrow.png"),
     save: require("../assets/images/save.png"),
     saved: require("../assets/images/saved.png"),
+    notch: require("../assets/images/notch.png"),
+    resize: require("../assets/images/resize.png"),
+    share: require("../assets/images/share.png"),
+    screenNav: require("../assets/images/screenNav.png"),
 }

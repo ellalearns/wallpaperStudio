@@ -27,8 +27,9 @@ export const categoryStyles = StyleSheet.create({
         paddingTop: 40,
     },
 
-    subViewLeft: {
-        // rowGap: 50
+    subView: {
+        flexDirection: "row",
+        justifyContent: "space-around"
     },
 
     catName: {
@@ -61,6 +62,61 @@ export const categoryStyles = StyleSheet.create({
     saveImg: {
         height: 24,
         width: 24
+    },
+
+    rightV: { 
+        width: 661, 
+        borderRadius: 16, 
+        padding: 40,
+        justifyContent: "space-between"
+    },
+
+    wholePreviewV: {
+        flexDirection: "row",
+        justifyContent: "space-between"
+    },
+
+    previewSub: {
+        justifyContent: "space-between",
+        width: 279,
+        minHeight: 300,
+        maxHeight: 500
+    },
+
+    previewT: {
+        fontFamily: fonts.poppinsSemiBold,
+        fontSize: 32,
+        color: "#000000",
+    },
+
+    label: {
+        fontFamily: fonts.poppinsRegular,
+        fontSize: 14,
+        color: "#808080"
+    },
+
+    currentName: {
+        fontFamily: fonts.poppinsMedium,
+        fontSize: 24,
+        color: "#000000"
+    },
+
+    midV: {
+        height: 330,
+        justifyContent: "space-evenly"
+    },
+
+    iconTouch: { 
+        width: 40, 
+        height: 40, 
+        backgroundColor: "rgba(124, 124, 124, 0.1)", 
+        borderRadius: 11, 
+        gap: 16, 
+        padding: 6.53, 
+        justifyContent: "center", 
+        alignItems: "center", 
+        borderWidth: 0.5, 
+        borderColor: "#e5e5e5"
     }
 })
 

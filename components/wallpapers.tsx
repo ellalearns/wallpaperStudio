@@ -7,10 +7,11 @@ import { categoryStyles } from "@/styles/categoryStyles"
 
 type WallpapersProps = {
   isList?: boolean,
-  category?: string
+  category?: string,
+  setCurrentWallpaper?: (value: any) => void
 }
 
-export default function Wallpapers({ isList, category }: WallpapersProps) {
+export default function Wallpapers({ isList, category, setCurrentWallpaper }: WallpapersProps) {
 
   const categoryWallpapers = wallpapers.find(item => item.name === category)?.wallpapers ?? []
   console.log(categoryWallpapers)
@@ -22,7 +23,7 @@ export default function Wallpapers({ isList, category }: WallpapersProps) {
       <View style={[indexStyles.wallpaperGroupView, isList && indexStyles.wallpaperGroupViewList, category ? null : indexStyles.allWallpaperGroupView]}>
         {
           category ? categoryWallpapers.map((item, idx) =>
-            <TouchableOpacity onPress={() => {}} style={isList && indexStyles.wallpaperTouch} key={idx}>
+            <TouchableOpacity onPress={() => {setCurrentWallpaper ? setCurrentWallpaper(item[0]) : null}} style={isList && indexStyles.wallpaperTouch} key={idx}>
 
               <ImageBackground source={item[0]} style={[indexStyles.catWallpaperView, isList && indexStyles.wallpaperViewList]} imageStyle={indexStyles.catImgStyle}>
               </ImageBackground>
