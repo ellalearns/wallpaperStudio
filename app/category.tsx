@@ -133,7 +133,20 @@ export default function Category() {
                         </View>
 
 
-                        <View></View>
+                        <View style={{ flexDirection: "row", justifyContent: "space-between"}}>
+                            <View></View>
+
+                            <View style={{ width: 420, gap: 20, flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
+                                <TouchableOpacity style={categoryStyles.actionTouch}>
+                                    <Image source={images.heart} style={{height: 24, width: 24, gap: 10}} />
+                                    <Text style={{ fontFamily: fonts.poppinsMedium, fontSize: 14, color: "#000000"}}>Save to Favorites</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={[categoryStyles.actionTouch, { backgroundColor: "#fbb03b"}]}>
+                                    <Text style={{ fontFamily: fonts.poppinsMedium, fontSize: 14, color: "#ffffff"}}>Set to Wallpaper</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
                     </LinearGradient>
                 </View>
             </ScrollView>

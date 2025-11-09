@@ -68,7 +68,8 @@ export const categoryStyles = StyleSheet.create({
         width: 661, 
         borderRadius: 16, 
         padding: 40,
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        height: 746
     },
 
     wholePreviewV: {
@@ -117,6 +118,20 @@ export const categoryStyles = StyleSheet.create({
         alignItems: "center", 
         borderWidth: 0.5, 
         borderColor: "#e5e5e5"
+    },
+
+    actionTouch: { 
+        width: 200, 
+        height: 50, 
+        borderWidth: 1, 
+        padding: 10, 
+        gap: 10, 
+        borderRadius: 21, 
+        borderColor: "#dfdfdf", 
+        backgroundColor: "#f8f8f8", 
+        justifyContent: "center", 
+        alignItems: "center",
+        flexDirection: "row"
     }
 })
 
