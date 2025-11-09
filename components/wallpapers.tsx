@@ -13,8 +13,8 @@ export default function Wallpapers ({ isList }: WallpapersProps) {
             <View style={[indexStyles.wallpaperGroupView, isList && indexStyles.wallpaperGroupViewList]}>
               {
                 (wallpapers).map((item, idx) =>
-                  <TouchableOpacity style={isList && indexStyles.wallpaperTouch}>
-                    <ImageBackground source={item.wallpapers[0]} style={[indexStyles.wallpaperView, isList && indexStyles.wallpaperViewList]} imageStyle={indexStyles.imgStyle} key={idx}>
+                  <TouchableOpacity style={isList && indexStyles.wallpaperTouch} key={idx}>
+                    <ImageBackground source={item.wallpapers[0]} style={[indexStyles.wallpaperView, isList && indexStyles.wallpaperViewList]} imageStyle={indexStyles.imgStyle}>
                     </ImageBackground>
                     <View style={[indexStyles.textView, isList && indexStyles.textViewList]}>
                         <Text style={[indexStyles.wallpaperName, isList && indexStyles.fontList]}>{item.name}</Text>

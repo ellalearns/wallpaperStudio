@@ -18,7 +18,7 @@ export default function WelcomeText({ page }: AppHeaderProps) {
     return (
         <View style={welcomeTxtStyles.view}>
             <View style={welcomeTxtStyles.imgView}>
-                <Image source={header} style={[welcomeTxtStyles.img, { width: options[page][2] }]} />
+                <Image source={header} style={[welcomeTxtStyles.img, { width: options[page][2] }]} resizeMode="contain" />
             </View>
             <Text style={welcomeTxtStyles.txt}>{pText}</Text>
         </View>

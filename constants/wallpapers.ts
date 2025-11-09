@@ -1,9 +1,5 @@
 import { images } from "./images";
 
-const wall = require("wallpaper")
-wall.set()
-
-
 export const wallpapers = [
     {
         "name": "Nature",

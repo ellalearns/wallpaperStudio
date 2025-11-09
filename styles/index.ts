@@ -91,7 +91,8 @@ export const indexStyles = StyleSheet.create({
         color: "#ffffff",
         width: 115,
         borderRadius: 30,
-        marginTop: 8
+        marginTop: 8,
+        backgroundColor: "rgba(255, 255, 255, 0.2)"
     },
 
     wallpaperNumList: {

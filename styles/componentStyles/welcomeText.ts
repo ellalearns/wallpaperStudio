@@ -19,7 +19,6 @@ export const welcomeTxtStyles = StyleSheet.create({
 
     img: {
         height: 60,
-        resizeMode: "contain"
     },
 
     imgView: {
