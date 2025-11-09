@@ -44,4 +44,5 @@ export const images = {
     resize: require("../assets/images/resize.png"),
     share: require("../assets/images/share.png"),
     screenNav: require("../assets/images/screenNav.png"),
+    emptySave: require("../assets/images/emptySave.png")
 }
