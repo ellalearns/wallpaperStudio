@@ -4,3 +4,6 @@ this is a Desktop version of Wallpaper Studios
 
 # repo
 
+https://github.com/ellalearns/wallpaperStudio
+
+# thanks
